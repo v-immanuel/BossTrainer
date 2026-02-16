@@ -1,0 +1,12 @@
+name: bosstrainer
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - numpy==2.4.1
+      - pygame==2.6.1
+      - pyqt6==6.10.2
+      - requests==2.32.5
