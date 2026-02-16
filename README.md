@@ -41,10 +41,10 @@ The trainer calculates the delta between your input and the target frame:
 
 | Timing | Result | Description |
 | :--- | :--- | :--- |
-| **< 0 ms** | **EARLY** | You pressed the button before the target. |
-| **0 - 50 ms** | **PERFECT** | Frame-perfect execution. |
-| **51 - 100 ms** | **GOOD** | Solid timing, consistent with high-level play. |
-| **101 - 150 ms** | **OK** | Barely made the window. |
+| **< 150 ms** | **EARLY** | You pressed the button before the target. |
+| **± 49 ms** | **PERFECT** | Frame-perfect execution. |
+| **± 99 ms** | **GOOD** | Solid timing, consistent with high-level play. |
+| **± 149  ms** | **OK** | Barely made the window. |
 | **> 150 ms** | **LATE** | Too slow for this boss mechanic. |
 | **No Input** | **MISS** | You missed the window entirely. |
 
@@ -62,7 +62,7 @@ Recording 60 FPS gameplay with high bitrate via OBS Studio requires more powerfu
 
 ### Development Environment (Reference)
 * **OS:** Linux
-* **Hardware:** Intel Core Ultra 9 285HX (24 Cores) | NVIDIA RTX 5080 (16 GB VRAM)
+* **Hardware:** Intel Core Ultra 9 285HX (24 Cores) | NVIDIA RTX 5070 (16 GB VRAM)
 * **Performance:** Tested for ultra-low input latency and stable 60 FPS video synchronization.
 
 ## Sample Data
@@ -80,10 +80,10 @@ To use this sample, you need the corresponding video file:
 
 Install Miniconda  [https://docs.anaconda.com/miniconda/] or Anaconda [https://www.anaconda.com/download/]
 
-Clone or download and extract the repository to your local machine:
+Clone or download the repository, then navigate into the project folder:
 
 ```bash
-git clone [https://github.com/v-immanuel/BossTrainer.git](https://github.com/v-immanuel/BossTrainer.git)
+git clone https://github.com/v-immanuel/BossTrainer.git
 cd BossTrainer
 ```
 **(Windows users: Please use the Anaconda Prompt)**
